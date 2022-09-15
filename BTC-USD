@@ -1,0 +1,19 @@
+Bitcoin_price = 21_000
+
+yes_or_no = input('Do you want to know what is Bitcoin price today? (yes/no):')
+
+if yes_or_no == 'no' or 'No':
+    print('Goodbye')
+
+if yes_or_no == 'yes' or 'Yes':
+    print('Bitcoin price today', Bitcoin_price, 'USD')
+    while True:
+        dollar_amount = input('How much USD do you have?')
+        if dollar_amount.isnumeric():
+            dollar_amount = int(dollar_amount)
+            print('You will get:',dollar_amount / Bitcoin_price, 'BTC')
+            break
+        else:
+            print('This is not an integer')
+            print('Try again, you should enter an integer')
+else: print('Try again,yes you should enter yes or no')
